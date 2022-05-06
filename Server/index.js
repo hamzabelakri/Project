@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const connect = require("./config/ConnectDb");
 const authRoute=require('./Routes/authRoute')
+const productRouter=require('./Routes/authRoute')
 require("dotenv").config({ path: "./config/.env" });
 const cors=require('cors');
 //connection between two ressorce
@@ -28,3 +29,4 @@ connect();
 //midelware global
 app.use(express.json());
 app.use('/auth',authRoute)
+app.use('/product',productRouter)
