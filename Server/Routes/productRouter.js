@@ -1,10 +1,11 @@
 const express=require('express');
 const router=express.Router();
-const {getAllProducts,addProduct,updateProduct,deleteProduct}=require('../Controllers/productController')
+const isAuth=require('../Midelware/Auth')
+const {getAllProducts,addProduct, updateProduct, deleteProduct}=require('../Controllers/productController')
 
 router.get('/', getAllProducts);
-router.post('/',isAuth, addProduct);
-router.put('/',isAuth, updateProduct);
-router.delete('/:id',isAuth, deleteProduct);
+router.post('/', addProduct);
+router.put('/', updateProduct);
+router.delete('/:id',deleteProduct);
 
 module.exports = router;

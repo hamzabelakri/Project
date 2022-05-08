@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const connect = require("./config/ConnectDb");
 const authRoute=require('./Routes/authRoute')
-const productRouter=require('./Routes/authRoute')
+const productRouter=require('./Routes/productRouter')
 require("dotenv").config({ path: "./config/.env" });
 const cors=require('cors');
 //connection between two ressorce
