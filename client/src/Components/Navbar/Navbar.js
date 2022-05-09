@@ -25,6 +25,10 @@ function CustomNavbar() {
             HOME
           </Link>
         </h1>
+        <Link to="/find-car"
+            style={{ textDecoration: "none", color: "white" }}>
+            Find a car
+        </Link>
 
         {isAuth ? (
           <div>
