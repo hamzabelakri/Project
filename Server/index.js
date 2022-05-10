@@ -1,10 +1,11 @@
 const express = require("express");
 const app = express();
 const connect = require("./config/ConnectDb");
-const authRoute=require('./Routes/authRoute')
-const productRouter=require('./Routes/productRouter')
+const authRoute = require("./Routes/authRoute");
+const productRouter = require("./Routes/productRouter");
+const adminRouter=require("./Routes/AdminRoute")
 require("dotenv").config({ path: "./config/.env" });
-const cors=require('cors');
+const cors = require("cors");
 //connection between two ressorce
 app.use(cors());
 app.use(express.json());
@@ -28,5 +29,6 @@ app.listen(process.env.PORT, () => {
 connect();
 //midelware global
 app.use(express.json());
-app.use('/auth',authRoute)
-app.use('/product',productRouter)
+app.use("/auth", authRoute);
+app.use("/product", productRouter);
+app.use("/users", adminRouter);

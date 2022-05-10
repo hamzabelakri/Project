@@ -41,7 +41,7 @@ function CustomNavbar() {
               to="/auth/sign-in"
               style={{ textDecoration: "none", color: "white" }}
             >
-              SignIN
+              MySpace
             </Link>
           </Nav>
         )}

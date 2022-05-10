@@ -1,9 +1,9 @@
 import React from 'react'
 import { Form, Button, FormControl } from "react-bootstrap";
 
-
 function FindCar() {
   return (
+    <div>
     <Form className="d-flex">
         <FormControl
           type="search"
@@ -13,6 +13,9 @@ function FindCar() {
         />
         <Button variant="outline-success">Search</Button>
       </Form>
+      
+    
+    </div>
   )
 }
 
