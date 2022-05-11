@@ -22,13 +22,18 @@ function CustomNavbar() {
         <h1>
           {" "}
           <Link to="/" style={{ textDecoration: "none", color: "white" }}>
-            HOME
+            DasAuto
           </Link>
         </h1>
+
         <Link to="/find-car"
             style={{ textDecoration: "none", color: "white" }}>
             Find a car
         </Link>
+
+        <Link to="/ContactUs" style={{ textDecoration: "none", color: "white" }}>
+            ContactUs
+          </Link>
 
         {isAuth ? (
           <div>
