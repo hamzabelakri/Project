@@ -4,7 +4,8 @@ import { Link } from "react-router-dom";
 import { useSelector ,useDispatch} from "react-redux";
 import {useNavigate} from "react-router-dom"
 import { Button } from "react-bootstrap";
-import {logOut} from "../../Redux/Actions/authAction"
+import {logOut} from "../../Redux/Actions/authAction";
+import "./Navbar.css";
 
 function CustomNavbar() {
   const navigate =useNavigate()
@@ -27,7 +28,7 @@ function CustomNavbar() {
         </h1>
 
         <Link to="/find-car"
-            style={{ textDecoration: "none", color: "white" }}>
+            style={{ textDecoration: "none", color: "white"}}> 
             Find a car
         </Link>
 
@@ -42,12 +43,14 @@ function CustomNavbar() {
           </div>
         ) : (
           <Nav>
+            <div className="a" >
             <Link
               to="/auth/sign-in"
-              style={{ textDecoration: "none", color: "white" }}
+              style={{ textDecoration: "none", color: "white",}}
             >
               MySpace
             </Link>
+            </div>
           </Nav>
         )}
       </Container>

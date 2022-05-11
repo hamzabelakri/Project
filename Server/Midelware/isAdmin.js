@@ -1,7 +1,7 @@
 const isAdmin=async(req,res,next)=>{
-    console.log(req)
+    console.log(req.user.role)
     try {
-        if(res.data.role!==1){
+        if(req.user.role!==1){
             res.status(400).json({msg:"Sorry, you aren't the boss :/"})
         }
         else{

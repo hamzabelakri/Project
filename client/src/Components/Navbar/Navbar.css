@@ -1,0 +1,10 @@
+.a:hover {
+    background-color: gold;
+    border-color:"blue";
+    border-style: solid;
+    border-width:1px;
+  }
+  .a{
+      background-color: red; 
+      
+  }

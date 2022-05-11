@@ -9,7 +9,7 @@ function Home() {
   <Carousel.Item>
     <img
       className="d-block w-100"
-      src="/bmw.jpg"
+      src="/bmw7.jpg"
       alt="First slide"
     />
     <Carousel.Caption>
@@ -17,6 +17,7 @@ function Home() {
       <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
     </Carousel.Caption>
   </Carousel.Item>
+ 
   <Carousel.Item>
     <img
       className="d-block w-100"
@@ -25,9 +26,10 @@ function Home() {
     />
 
     <Carousel.Caption>
-      <h3>Our Showrooms</h3>
-      <p></p>
+      <h3>OUR SHOWROOM</h3>
+      <p>ALL CAR BRANDS</p>
     </Carousel.Caption>
+
   </Carousel.Item>
   <Carousel.Item>
     <img
@@ -37,7 +39,7 @@ function Home() {
     />
 
     <Carousel.Caption>
-      <h3>Repair</h3>
+      <h3>REPAIR</h3>
       <p></p>
     </Carousel.Caption>
   </Carousel.Item>
