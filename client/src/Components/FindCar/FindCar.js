@@ -1,7 +1,15 @@
-import React,{useState} from "react";
+import React,{useState, useEffect} from "react";
 import { Form, Button, FormControl } from "react-bootstrap";
+import {useDispatch} from "react-redux";
+import {getAllProducts} from "../../Redux/Actions/ProductAction.js";
 
 function FindCar({onSearch}) {
+
+  const dispatch = useDispatch()
+  useEffect (() =>{
+  dispatch(getAllProducts())
+
+  }, [dispatch])
 
   const [caracter, setCaracter] = useState("");
   const handleChange = (event) => {

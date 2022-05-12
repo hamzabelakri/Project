@@ -1,10 +1,47 @@
 .a:hover {
-    background-color: gold;
-    border-color:"blue";
-    border-style: solid;
-    border-width:1px;
+    background-color: red;
+    
   }
   .a{
-      background-color: red; 
+      
+      height:65px;
+      margin-top: -10px;
+    
+      display:flex;
+      align-items: center;
+      margin-bottom: -10px;
+
+  
       
   }
+ 
+
+
+
+
+
+      
+  
+   /* .navbar .navbar-nav .nav-link {
+    padding: 0.6em;
+  }
+  .navbar .navbar-brand {
+    padding: 0 0.6em;
+  }
+  @media only screen and (min-width: 992px) {
+    .navbar {
+      padding: 0;
+    }
+    .navbar .navbar-nav .nav-link {
+      padding: 1em 0.7em;
+    }
+    .navbar .navbar-brand {
+      padding: 0 0.8em;
+    }
+  }
+  .navbar .navbar-nav .nav-link:hover {
+    background-color: #FFACB7;
+    color: #fff;
+  } */
+  
+  

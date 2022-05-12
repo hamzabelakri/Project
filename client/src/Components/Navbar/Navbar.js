@@ -27,12 +27,12 @@ function CustomNavbar() {
           </Link>
         </h1>
 
-        <Link to="/find-car"
+        <Link to="/find-car" className="a"
             style={{ textDecoration: "none", color: "white"}}> 
             Find a car
         </Link>
 
-        <Link to="/ContactUs" style={{ textDecoration: "none", color: "white" }}>
+        <Link to="/ContactUs" className="a" style={{ textDecoration: "none", color: "white" }}>
             ContactUs
           </Link>
 
