@@ -1,4 +1,4 @@
-.a:hover {
+ .a:hover {
     background-color: red;
     
   }
@@ -13,13 +13,15 @@
 
   
       
-  }
- 
+  } 
+  
 
 
-
-
-
+  
+  /* .a{
+    margin-left:20px;
+    margin-right:20px;
+  } */
       
   
    /* .navbar .navbar-nav .nav-link {

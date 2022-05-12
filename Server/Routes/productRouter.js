@@ -5,7 +5,7 @@ const {getAllProducts,addProduct, updateProduct, deleteProduct}=require('../Cont
 
 router.get('/', getAllProducts);
 router.post('/', addProduct);
-router.put('/', updateProduct);
+router.put('/:id', updateProduct);
 router.delete('/:id',deleteProduct);
 
 module.exports = router;

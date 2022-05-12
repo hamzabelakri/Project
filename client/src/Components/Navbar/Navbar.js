@@ -56,6 +56,7 @@ function CustomNavbar() {
       </Container>
     </Navbar>
   );
+  
 }
 
 export default CustomNavbar;
