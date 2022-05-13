@@ -1,4 +1,4 @@
-import React,{useState, useEffect} from "react";
+import React,{useEffect} from "react";
 import {useDispatch,useSelector} from "react-redux";
 import {getAllProducts} from "../../Redux/Actions/ProductAction.js";
  import CarDetail from "../CarDetail/CarDetail" 

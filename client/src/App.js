@@ -2,6 +2,7 @@ import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Home from "./Components/Home/Home.js";
+import Footer from "./Components/Footer/Footer"
 import FindCar from "./Components/FindCar/FindCar";
 import ContactUs from "./Components/ContactUs/ContactUs"
 import SignIn from "./Components/AUTH/SignIn";
@@ -39,7 +40,9 @@ function App() {
           }
         />
       </Routes>
+      
     </BrowserRouter>
+   
   );
 }
 
