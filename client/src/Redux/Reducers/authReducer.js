@@ -1,5 +1,5 @@
 import { SIGN_IN, USER_FAIL, LOG_OUT, REGISTER,GET_USER } from "../Types";
-const initState = { user: null, isAuth: false ,};
+const initState = { user: null, isAuth: false };
 const authReducer = (state = initState, action) => {
   switch (action.type) {
     case SIGN_IN:

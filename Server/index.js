@@ -3,7 +3,8 @@ const app = express();
 const connect = require("./config/ConnectDb");
 const authRoute = require("./Routes/authRoute");
 const productRouter = require("./Routes/productRouter");
-const adminRouter=require("./Routes/AdminRoute")
+const adminRouter=require("./Routes/AdminRoute");
+const messageRouter=require('./Routes/MessageRoute')
 require("dotenv").config({ path: "./config/.env" });
 const cors = require("cors");
 //connection between two ressorce
@@ -32,3 +33,4 @@ app.use(express.json());
 app.use("/auth", authRoute);
 app.use("/product", productRouter);
 app.use("/users", adminRouter);
+app.use('/message',messageRouter)

@@ -1,6 +1,6 @@
 import {GET_ALL_PRODUCTS } from "../Types"
 
-const initState={product:{},produts:[]}
+const initState={}
 const  ProductReducer=(state=initState,action)=>{
     switch(action.type){
         case GET_ALL_PRODUCTS:
