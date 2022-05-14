@@ -1,26 +1,31 @@
 import React from "react";
 import { Card, Button } from "react-bootstrap";
-import {getOneUser} from "../Redux/Actions/UserActions"
-import {useNavigate} from "react-router-dom";
+import {useNavigate} from "react-router-dom"
+import {getOneProduct} from "../../Redux/Actions/ProductAction"
 import {useDispatch} from "react-redux";
-function CardUser({ user }) {
-    const disptch=useDispatch()
-    const navigate=useNavigate()
-  const handleClick = () => {
-    disptch(getOneUser(user._id,navigate))
-  };
-  return (
-    <Card >
-      <Card.Header> brand:{brand}</Card.Header>
-      <Card.Body>
-        <Card.Title>image:{image}</Card.Title>
 
-        <Button variant="primary" onClick={handleClick}>
-          view Details
-        </Button>
+
+
+function Cardcar({ product }) {
+    const dispatch= useDispatch;
+  const navigate=useNavigate();
+  const handleClick=()=>{
+    /* dispatch (getOneProduct(product._id, navigate)) */
+   alert (product._id)
+  }
+  return (
+    <Card style={{ width: "18rem" }}>
+      <Card.Img variant="top" src={product.image} />
+      <Card.Body>
+        <Card.Title>{product.brand}</Card.Title>
+        <Card.Text>
+          Some quick example text to build on the card title and make up the
+          bulk of the card's content.
+        </Card.Text>
+        <Button variant="primary" onClick={handleClick}>Go somewhere</Button>
       </Card.Body>
     </Card>
   );
 }
 
-export default CardUser;
+export default Cardcar;

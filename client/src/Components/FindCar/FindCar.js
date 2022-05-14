@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getAllProducts } from "../../Redux/Actions/ProductAction.js";
-import CarDetail from "../CarDetail/CarDetail";
+import CardCar from "../CardCar/CardCar";
 
 function FindCar() {
   const { products } = useSelector((state) => state.ProductReducer);
@@ -20,7 +20,7 @@ function FindCar() {
       }}
     >
       {products &&
-        products.map((elt) => <CarDetail key={elt._id} product={elt} />)}
+        products.map((elt) => <CardCar key={elt._id} product={elt} />)}
     </div>
   );
 }

@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Home from "./Components/Home/Home.js";
 import Footer from "./Components/Footer/Footer"
+import CarDetail from "./Components/CarDetail/CarDetail";
 import FindCar from "./Components/FindCar/FindCar";
 import ContactUs from "./Components/ContactUs/ContactUs"
 import SignIn from "./Components/AUTH/SignIn";
@@ -31,6 +32,7 @@ function App() {
         <Route path="/ContactUs" element={<ContactUs/>} />
         <Route path="/auth/sign-in" element={<SignIn />} />
         <Route path="/auth/register" element={<Register />} />
+        <Route path="/:id" element={<CarDetail/>}/>
         <Route
           path="/profile"
           element={
@@ -40,6 +42,7 @@ function App() {
           }
         />
       </Routes>
+        
       
     </BrowserRouter>
    

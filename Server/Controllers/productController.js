@@ -66,8 +66,17 @@ const deleteProduct = async (req, res) => {
 
 }
 
+const getOneProduct = async(req, res) => {
+
+    try {
+        const id = req.params.id;
+        const product=await Product.findById(id)
+        res.json({product:product})
+    } catch (error) {
+        res.json({msg:"failed to get product"})
+    }
+}
 
 
-
-module.exports={getAllProducts,addProduct, updateProduct, deleteProduct}
+module.exports={getAllProducts,addProduct, updateProduct, deleteProduct, getOneProduct}
 
