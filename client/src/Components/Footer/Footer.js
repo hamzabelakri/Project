@@ -1,11 +1,12 @@
 import React from "react";
 import "./Footer.css";
+import { useNavigate } from "react-router-dom";
 
 
 function Footer() {
+  let navigate = useNavigate();
 
   return (
-    
     <div className="footer-body">
       <h1 className="title-footer">
 				Sounds interesting? Join us now!
@@ -15,4 +16,3 @@ function Footer() {
 }
 
 export default Footer;
-
