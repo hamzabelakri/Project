@@ -9,7 +9,7 @@ function ContactUs() {
       };
 
   return (
-    <div>
+    /* <div>
       <Form style={{ width: "40%", margin: "auto" }} onSubmit={onSubmit}>
         <Form.Group className="mb-3" controlId="formBasicPassword">
           <Form.Label>Name</Form.Label>
@@ -34,7 +34,52 @@ function ContactUs() {
         </Button>
       </Form>
     </div>
-  );
+  ); */
+
+  <div class="form-wrap" style = {{width: "550px"}}onSubmit={onSubmit}>
+  <div class="tabs">
+    
+    
+  </div>
+
+  <div class="tabs-content">
+    <div id="signup-tab-content" class="active">
+      <form class="signup-form" action="" method="post">
+        <input
+          class="input"
+          id="user_name"
+          autocomplete="off"
+          placeholder="Name"
+          type="text"
+          
+          name="username"
+        />
+        <input
+          type="email"
+          class="input"
+          id="user_email"
+          autocomplete="off"
+          placeholder="Name@gmail.com"
+          name="email"
+        />
+
+        <textarea
+          type="textarea"
+          class="input"
+          id="user_pass"
+          autocomplete="off"
+          placeholder="Enter your message"
+          rows="3"
+          name="message"
+        />
+        <input type="submit" class="button" value="Send" style = {{width: "80%", margin: "auto 50px"}}/>
+      </form>
+    </div>
+
+
+  </div>
+</div>
+  )
 }
 
 export default ContactUs;

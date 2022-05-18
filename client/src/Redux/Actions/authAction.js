@@ -42,4 +42,3 @@ export const getUser=()=>async(dispatch)=>{
         console.log(error.response.data)
     }
 }
-

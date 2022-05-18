@@ -17,7 +17,7 @@ const postMessage = async (req, res) => {
       message: messageInfo.message,
     });
     await newMessage.save();
-    res.status(201).json({ msg: "your  message have benn sent to th admin " });
+    res.status(201).json({ msg: "Message sent" });
   } catch (error) {
     res.status(400).json({ msg: "Failed to sent message" });
   }

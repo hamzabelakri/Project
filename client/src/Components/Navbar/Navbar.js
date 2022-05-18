@@ -42,7 +42,7 @@ function CustomNavbar() {
             </div>
           ) : (
             <Nav.Link>
-              <Link to="/auth/sign-in" style={{ textDecoration: "none", color: "white"}}>MySpace</Link>
+              <Link to="/auth/register" style={{ textDecoration: "none", color: "white"}}>MySpace</Link>
             </Nav.Link>
           )}
         </Nav>

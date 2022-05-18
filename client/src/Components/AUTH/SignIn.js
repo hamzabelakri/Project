@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Form, Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { login } from "../../Redux/Actions/authAction.js";
@@ -20,32 +19,50 @@ function SignIn() {
     navigate("/auth/register");
   };
   return (
-    <Form style={{ width: "40%", margin: "auto" }} onSubmit={onSubmit}>
-      <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-        <Form.Label>Email address</Form.Label>
-        <Form.Control
-          onChange={handleChange}
-          type="email"
-          value={useInfo.email}
-          placeholder="name@example.com"
-          name="email"
-        />
-      </Form.Group>
-      <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-        <Form.Label>password</Form.Label>
-        <Form.Control
-          onChange={handleChange}
-          type="password"
-          value={useInfo.password}
-          placeholder="name@example.com"
-          name="password"
-        />
-      </Form.Group>
-      <Button variant="primary" onChange={handleChange} type="submit">
-        Submit
-      </Button>
-      <p onClick={handleClick}>DO not have an account?</p>
-    </Form>
+    <div class="form-wrap" onSubmit={onSubmit}>
+      <div class="tabs">
+        <h3 class="signup-tab">
+          <a class="active" href="#signup-tab-content">
+            Login
+          </a>
+        </h3>
+        <h3 class="login-tab">
+          <a href="#login-tab-content" onClick={handleClick}>
+            Sing up
+          </a>
+        </h3>
+      </div>
+      <div class="tabs-content">
+        <div id="login-tab-content" class="active">
+          <form class="login-form" action="" method="post">
+            <input
+              class="input"
+              id="user_login"
+              autocomplete="off"
+              onChange={handleChange}
+              type="email"
+              value={useInfo.email}
+              placeholder="name@example.com"
+              name="email"
+            />
+            <input
+              class="input"
+              id="user_pass"
+              autocomplete="off"
+              onChange={handleChange}
+              type="password"
+              value={useInfo.password}
+              placeholder="name@example.com"
+              name="password"
+            />
+            <input type="checkbox" class="checkbox" id="remember_me" />
+            <label for="remember_me">Remember me</label>
+
+            <input type="submit" class="button" value="Login" />
+          </form>
+        </div>
+      </div>
+    </div>
   );
 }
 
