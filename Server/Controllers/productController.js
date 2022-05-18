@@ -22,14 +22,14 @@ const addProduct = async (req, res) => {
             description: productInfo.description,
         })
         await newProduct.save()
-        res.status(201).json({Product:newProduct})
+        res.status(201).json({msg:"added successfully", Product:newProduct})
     } catch (error) {
-        res.status(400).json({msg:"Failed to add new product"})
+        res.status(400).json({msg:"failed to add new product"})
     }
 }
 
 
-const updateProduct = async (req, res) => {
+/* const updateProduct = async (req, res) => {
 
     try {
         const productInfo = req.body;
@@ -49,7 +49,21 @@ const updateProduct = async (req, res) => {
     } catch (error) {
         res.status(400).json({msg:"Failed to udpate product"})
     }
+} */
+
+const updateProduct = async (req, res) => {
+
+    try {
+        const id= req.params.id
+        const product = req.body
+        await Product.findByIdAndUpdate(id, product,{ new: true })
+        res.status(201).json({msg: "updated successfully", Product:product})
+    } catch (error) {
+        res.status(400).json({msg:"failed to udpate product"})
+    }
 }
+
+
 
 const deleteProduct = async (req, res) => {
 
@@ -57,11 +71,11 @@ const deleteProduct = async (req, res) => {
         const productId = req.params['id'];
         const deleteproduct = await Product.findByIdAndRemove({_id: productId})
 
-        res.status(201).json({Product: deleteproduct})
+        res.status(201).json({msg: "deleted successfully",Product: deleteproduct})
 
 
     } catch (error) {
-        res.status(400).json({msg:"Failed to delete product"})
+        res.status(400).json({msg:"failed to delete product"})
     }
 
 }
@@ -79,4 +93,3 @@ const getOneProduct = async(req, res) => {
 
 
 module.exports={getAllProducts,addProduct, updateProduct, deleteProduct, getOneProduct}
-

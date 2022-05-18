@@ -14,7 +14,7 @@ function FindCar() {
     <div>
       <Form
         className="d-flex"
-        style={{ width: "400px", margin: "15px auto", textAlign: "center" }}
+        style={{ width: "400px", margin: "30px auto", textAlign: "center" }}
       >
         <FormControl
           type="search"

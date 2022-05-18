@@ -3,6 +3,7 @@ import { Card, Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import { getOneProduct } from "../../Redux/Actions/ProductAction";
 import { useDispatch } from "react-redux";
+import "./CardCar.css"
 
 function Cardcar({ product }) {
   const dispatch = useDispatch;
@@ -12,8 +13,8 @@ function Cardcar({ product }) {
     alert(product._id);
   };
   return (
-    <Card style={{ width: "18rem" }}>
-      <Card.Img
+    <Card class="card"   style={{ width: "18rem" }}>
+      <Card.Img 
         variant="top"
         style={{ width: "100%", height: "15vw", objectFit: "cover" }}
         src={product.image}
