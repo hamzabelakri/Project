@@ -1,18 +1,30 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getAllProducts } from "../../Redux/Actions/ProductAction.js";
 import CardCar from "../CardCar/CardCar";
-import { Form, FormControl, Button } from "react-bootstrap";
+import { Form, FormControl, Button, Spinner } from "react-bootstrap";
 
-function FindCar() {
+
+function FindCar(onSearch) {
   const { products } = useSelector((state) => state.ProductReducer);
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getAllProducts());
   }, []);
+
+  const [caracter, setCaracter] = useState("");
+  const handleChange = (event) => {
+    setCaracter(event.target.value);
+  };
+
+  const   onSubmit=(event)=>{
+    event.preventDefault()
+    onSearch(caracter)
+  };
+
   return (
     <div>
-      <Form
+      <Form onSubmit={onSubmit}
         className="d-flex"
         style={{ width: "400px", margin: "30px auto", textAlign: "center" }}
       >
@@ -22,7 +34,7 @@ function FindCar() {
           className="me-2"
           aria-label="Search"
         />
-        <Button variant="outline-success">Search</Button>
+        <Button variant="outline-success" onChange={handleChange}>Search</Button>
       </Form>
       <div
         style={{
@@ -33,8 +45,8 @@ function FindCar() {
           flexWrap: "wrap",
         }}
       >
-        {products &&
-          products.map((elt) => <CardCar key={elt._id} product={elt} />)}
+        {products ?
+          products.map((elt) => <CardCar key={elt._id} product={elt}  />) : <Spinner animation="border" variant="success" />}
       </div>
     </div>
   );
